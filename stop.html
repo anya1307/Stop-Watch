@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="watch.css">
+    <script src="stopwatch.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="stopwatch">
+            <!-- Clock Display -->
+            <div class="clock" id="clock">
+                <div class="clockDisplay" id="hours">00</div>
+                <div class="separator">:</div>
+                <div class="clockDisplay" id="minutes">00</div>
+                <div class="separator">:</div>
+                <div class="clockDisplay" id="seconds">00</div>
+                <div class="separator">.</div>
+                <div class="clockDisplay" id="milliseconds">00</div>
+            </div>
+            <!-- Buttons -->
+             <div class="btn">
+                <button class="startStop" id="startBtn">Start</button>
+                <button class="startStop" id="stopBtn" style="display: none;">Stop</button>
+                <button class="lapReset" id="lapBtn" style="display: none;">Lap</button>
+                <button class="lapReset" id="resetBtn" style="display: none;">Reset</button>
+             </div>
+        </div>
+        <!-- Lap List -->
+         <div class="lapList" id="lapList" style="display: none;">
+            <table id="lapTable">
+                <thead>
+                    <tr>
+                        <th>Laps</th>
+                        <th>Timestamp</th>
+                        <th>Difference</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+         </div>
+    </div>
+</body>
+</html>
